@@ -121,3 +121,30 @@ body {
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.1);
 }
+
+/* Invite Bot Button */
+.invite-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5865F2, #404EED);
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.35);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.invite-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(88, 101, 242, 0.55);
+  background: linear-gradient(135deg, #6c77ff, #4b5cff);
+}
+
+/* Active (click) */
+.invite-btn:active {
+  transform: scale(0.97);
+}
