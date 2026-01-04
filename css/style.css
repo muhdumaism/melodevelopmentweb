@@ -121,30 +121,72 @@ body {
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.1);
 }
+.card-actions {
+  margin-top: 1.8rem;
+}
 
 /* Invite Bot Button */
 .invite-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.6rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  border-radius: 12px;
   text-decoration: none;
-  color: #fff;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #5865F2, #404EED);
-  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.35);
-  transition: all 0.3s ease;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #5865f2, #404eed);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.35);
+
+  transition: all 0.25s ease;
 }
 
-/* Hover Effect */
 .invite-btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 14px 40px rgba(88, 101, 242, 0.55);
-  background: linear-gradient(135deg, #6c77ff, #4b5cff);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(88, 101, 242, 0.6);
+  background: linear-gradient(135deg, #6b75ff, #4f5dff);
 }
 
-/* Active (click) */
 .invite-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #8f8fa8;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links a {
+    margin-left: 1rem;
+  }
 }
