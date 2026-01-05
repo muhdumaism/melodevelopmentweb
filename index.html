@@ -39,8 +39,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
-  min-height: 60vh;
+  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +50,8 @@
   text-align: center;
   color: white;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 ">
   <div style="
     position: absolute;
@@ -58,8 +62,8 @@
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   "></div>
-  <h2 style="position: relative; z-index: 2;">Melo Development</h2>
-  <p style="position: relative; z-index: 2;">Modern Discord bots built with performance and style.</p>
+  <h2 style="position: relative; z-index: 2; margin: 0;">Melo Development</h2>
+  <p style="position: relative; z-index: 2; margin: 0 0 2rem 0;">Modern Discord bots built with performance and style.</p>
   <div class="hero-buttons" style="position: relative; z-index: 2;">
     <a href="https://discord.gg/5cweav9rsu" class="btn primary">Join Discord</a>
     <a href="#bots" class="btn outline">View Bots</a>
