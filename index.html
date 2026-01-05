@@ -34,11 +34,33 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="hero-bg"></div>
-  <h2>Melo Development</h2>
-  <p>Modern Discord bots built with performance and style.</p>
-  <div class="hero-buttons">
+<header class="hero" style="
+  background-image: url('assets/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+">
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  "></div>
+  <h2 style="position: relative; z-index: 2;">Melo Development</h2>
+  <p style="position: relative; z-index: 2;">Modern Discord bots built with performance and style.</p>
+  <div class="hero-buttons" style="position: relative; z-index: 2;">
     <a href="https://discord.gg/5cweav9rsu" class="btn primary">Join Discord</a>
     <a href="#bots" class="btn outline">View Bots</a>
   </div>
@@ -96,10 +118,3 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
