@@ -5,22 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Melo Development</title>
 
-<!-- SEO -->
 <meta name="description" content="Melo Development – Modern, high-performance Discord bots.">
 <meta name="theme-color" content="#000000">
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<!-- CSS -->
 <link rel="stylesheet" href="css/stylev2.css">
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
-<link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
 
 <body>
@@ -34,37 +23,13 @@
   </div>
 </nav>
 
-<header class="hero" style="
-  background-image: url('assets/images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-">
-  <div style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  "></div>
-  <h2 style="position: relative; z-index: 2; margin: 0;">Melo Development</h2>
-  <p style="position: relative; z-index: 2; margin: 0 0 2rem 0;">Modern Discord bots built with performance and style.</p>
-  <div class="hero-buttons" style="position: relative; z-index: 2;">
+<header class="hero">
+  <div class="hero-bg"></div>
+
+  <h2>Melo Development</h2>
+  <p>Modern Discord bots built with performance and style.</p>
+
+  <div class="hero-buttons">
     <a href="https://discord.gg/5cweav9rsu" class="btn primary">Join Discord</a>
     <a href="#bots" class="btn outline">View Bots</a>
   </div>
@@ -80,40 +45,31 @@
 
 <section id="bots" class="section">
   <h3>Our Bots</h3>
+
   <div class="cards">
 
-<div class="card">
-  <h4>🎵 Melo Music</h4>
-  <p>High-quality music bot with slash commands.</p>
+    <div class="card">
+      <h4>🎵 Melo Music</h4>
+      <p>High-quality music bot with slash commands.</p>
+      <div class="card-actions">
+        <a href="https://discord.com/oauth2/authorize?client_id=1436971039551782982&permissions=8&scope=bot%20applications.commands" class="invite-btn" target="_blank">
+          Invite Bot
+        </a>
+      </div>
+    </div>
 
-  <div class="card-actions">
-    <a
-      href="https://discord.com/oauth2/authorize?client_id=1436971039551782982&permissions=8&scope=bot%20applications.commands"
-      class="invite-btn"
-      target="_blank"
-    >
-      Invite Bot
-    </a>
+    <div class="card">
+      <h4>🎫 Melo Tickets</h4>
+      <p>Advanced ticket system with buttons, roles and categories.</p>
+      <div class="card-actions">
+        <a href="https://discord.com/oauth2/authorize?client_id=1456884575702880308&permissions=8&scope=bot%20applications.commands" class="invite-btn" target="_blank">
+          Invite Bot
+        </a>
+      </div>
+    </div>
+
   </div>
-</div>
-
-<div class="card">
-  <h4>🎫 Melo Tickets</h4>
-  <p>Advanced ticket system with buttons, roles and categories.</p>
-
-  <div class="card-actions">
-    <a
-      href="https://discord.com/oauth2/authorize?client_id=1456884575702880308&permissions=8&scope=bot%20applications.commands"
-      class="invite-btn"
-      target="_blank"
-    >
-      Invite Bot
-    </a>
-  </div>
-</div>
-    
 </section>
-
 
 <footer class="footer">
   © 2026 Melo Development
