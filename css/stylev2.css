@@ -19,6 +19,7 @@ body {
 }
 
 /* NAVBAR */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -28,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   z-index: 1000;
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
@@ -35,14 +37,21 @@ body {
 
 .logo {
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* THIS prevents stacking */
 }
 
 .nav-links a {
-  margin-left: 2rem;
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
+  white-space: nowrap; /* prevents line break */
   transition: 0.2s;
 }
 
@@ -221,3 +230,4 @@ body {
     margin-left: 1rem;
   }
 }
+
