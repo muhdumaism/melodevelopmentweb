@@ -18,21 +18,32 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAV */
+/* NAVBAR */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+  width: 100%;
+  padding: 1.2rem 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.3rem;
 }
 
 .nav-links a {
   margin-left: 2rem;
   color: var(--muted);
   text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -41,13 +52,38 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 100vh;
+  position: relative;
+  height: 100vh;
+  padding: 0 8%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
   text-align: center;
-  padding: 0 8%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 3;
 }
 
 .hero h2 {
@@ -56,10 +92,15 @@ body {
 }
 
 .hero p {
-  margin-top: 1rem;
-  margin-bottom: 2.5rem; /* 👈 adds space before buttons */
   color: var(--muted);
   font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* BUTTONS */
@@ -69,7 +110,6 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
-  display: inline-block;
 }
 
 .primary {
@@ -89,11 +129,25 @@ body {
 /* SECTIONS */
 .section {
   padding: 7rem 8%;
+  text-align: center;
 }
 
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* CARDS */
 .cards {
+  margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -102,6 +156,7 @@ body {
   padding: 2.5rem;
   border-radius: 20px;
   transition: 0.3s;
+  text-align: left;
 }
 
 .card:hover {
@@ -112,18 +167,11 @@ body {
   color: var(--muted);
 }
 
-/* FOOTER */
-.footer {
-  padding: 3rem;
-  text-align: center;
-  color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
 .card-actions {
   margin-top: 1.8rem;
 }
 
-/* Invite Bot Button */
+/* Invite Button */
 .invite-btn {
   display: inline-flex;
   align-items: center;
@@ -134,37 +182,26 @@ body {
   border-radius: 12px;
   text-decoration: none;
   color: #ffffff;
-
   background: linear-gradient(135deg, #5865f2, #404eed);
   box-shadow: 0 6px 20px rgba(88, 101, 242, 0.35);
-
   transition: all 0.25s ease;
 }
 
 .invite-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 40px rgba(88, 101, 242, 0.6);
-  background: linear-gradient(135deg, #6b75ff, #4f5dff);
 }
 
-.invite-btn:active {
-  transform: scale(0.96);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 .footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.85rem;
   color: #8f8fa8;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* MOBILE */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 2.5rem;
@@ -180,61 +217,7 @@ body {
     text-align: center;
   }
 
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-
   .nav-links a {
     margin-left: 1rem;
   }
 }
-
-.hero {
-  position: relative;
-  min-height: 60vh; /* Full viewport feel */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('assets/images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Subtle dark overlay */
-  z-index: 2;
-}
-
-.hero > *:not(.hero-bg) {
-  position: relative;
-  z-index: 3; /* Content on top */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 50vh;
-  }
-}
-
-
